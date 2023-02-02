@@ -302,17 +302,16 @@ hr{
     position: absolute;
     top: 0;
     left: 0;
-    height: 390px;
 }
 #about .about_img .img2{
     position: absolute;
     top: 110px;
     left: 210px;
     z-index: 1;
-    height: 390px;
 }
 #about .about_text{
     width: 50%;
+    padding-left: 100px;
 }
 #about .about_text .welcome_text{
     font-size: 18px;
@@ -538,3 +537,294 @@ hr{
     margin-left: -70%;
 }
 /* ======= feedback section styles end ======= */
+
+/* ======= tab area section styles start ======= */
+#tabarea{
+    width: 100%;
+    height: auto;
+    background-color: #f5fbff;
+}
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 80px;
+}
+.tabs input[type="radio"]{
+    display: none;
+}
+.tabs label{
+    padding: 40px;
+    background: #f5fbff;
+    font-weight: 400;
+    font-size: 18px;
+    width: 33.3%;
+    color: #1f1f1f;
+}
+.tabs .tab{
+    width: 100%;
+    order: 1;
+    display: none;
+    background: #ffffff;
+    padding: 80px 30px;
+    border-bottom: 1px solid #cacaca;
+}
+.tabs .tab .tab_text{
+    width: 50%;
+    height: 340px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tabs .tab .tab_text .icon{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5db2ff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.tabs .tab .tab_text .icon i{
+    color: #ffffff;
+    font-size: 30px;
+}
+.tabs .tab .tab_text h3{
+    color: #1f1f1f;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.tabs .tab .tab_text p{
+    color: #727272;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.tabs .tab .tab_img{
+    width: 50%;
+    float: right;
+}
+.tabs .tab .tab_img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.tabs input[type='radio']:checked + label + .tab{
+    display: block;
+}
+.tabs input[type="radio"]:checked + label{
+    background: #fff;
+}
+/* ======= tab area section styles end ======= */
+
+/* ======= expert doctor section styles start ======= */
+#exp_doc{
+    padding: 100px 80px;
+}
+#exp_doc .section_heading{
+    text-align: left;
+    margin-bottom: 40px;
+}
+#exp_doc .section_heading h2{
+    font-size: 35px;
+}
+#exp_doc .doctors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#exp_doc .doctors .single_doc{
+    width: 23%;
+    border-radius: 5px 5px 0 0;
+    background-color: #f5fbff;
+}
+#exp_doc .doctors .single_doc .doc_img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+#exp_doc .doctors .single_doc .doc_img img{
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+}
+#exp_doc .doctors .single_doc:hover img{
+    transform: scale(1.1);
+}
+#exp_doc .doctors .single_doc .doc_text{
+    padding: 20px 0;
+    text-align: center;
+}
+#exp_doc .doctors .single_doc .doc_text h4{
+    font-size: 24px;
+    font-weight: 500;
+    color: #1f1f1f;
+}
+#exp_doc .doctors .single_doc .doc_text p{
+    font-size: 14px;
+    color: #919191;
+}
+/* ======= expert doctor section styles end ======= */
+
+/* ======= contact section styles start ======= */
+#contact{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#contact .emergency_contact{
+    width: 50%;
+    background-image: url(../images/emergency_contact_bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#contact .make_appoinment{
+    width: 50%;
+    background-image: url(../images/make_appoinment_bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#contact .make_appoinment::before, #contact .emergency_contact::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(74,164,233,0.7);
+}
+#contact .make_appoinment, #contact .emergency_contact{
+    padding: 100px 50px 100px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.emergency_contact .emergency_text, .emergency_contact .emergency_btn{
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+.make_appoinment .appoinment_text, .make_appoinment .appoinment_btn{
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+.emergency_contact .emergency_text h3, .make_appoinment .appoinment_text h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.emergency_contact .emergency_text p, .make_appoinment .appoinment_text p{
+    font-size: 14px;
+}
+.emergency_contact .emergency_btn a, .make_appoinment .appoinment_btn a{
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 12px 30px;
+    transition: all ease-in-out 0.5s;
+
+}
+.emergency_contact .emergency_btn a:hover, .make_appoinment .appoinment_btn a:hover{
+    background-color: #ffffff;
+    color: #0181f5;
+}
+/* ======= contact section styles end ======= */
+
+/* ======= footer section styles start ======= */
+.main_footer_area{
+    background-color: #1f1f1f;
+    padding: 100px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.main_footer_area .footer_part_one{
+    width: 40%;
+}
+.main_footer_area .footer_part_one img{
+    margin-bottom: 20px;
+}
+.main_footer_area .footer_part_one p{
+    color: #ffffff;
+    font-size: 16px;
+    width: 400px;
+    color: #c7c7c7;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.main_footer_area .footer_part_one .footer_social_links{
+    list-style-type: none;
+}
+.main_footer_area .footer_part_one .footer_social_links li{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.main_footer_area .footer_part_one .footer_social_links li a i{
+    font-size: 18px;
+    color: #bababa;
+}
+.main_footer_area .footer_part_two{
+    width: 20%;
+}
+.main_footer_area .footer_part_three{
+    width: 20%;
+}
+.main_footer_area .footer_part_four{
+    width: 20%;
+}
+.main_footer_area .footer_part_two h3, .main_footer_area .footer_part_three h3, .main_footer_area .footer_part_four h3{
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.main_footer_area .footer_part_two ul, .main_footer_area .footer_part_three ul{
+    list-style-type: none;
+}
+.main_footer_area .footer_part_two ul li, .main_footer_area .footer_part_three ul li{
+    padding: 10px 0;
+}
+.main_footer_area .footer_part_two ul li a, .main_footer_area .footer_part_three ul li a{
+    font-size: 16px;
+    color: #c7c7c7;
+    transition: all ease-in-out 0.5s;
+}
+.main_footer_area .footer_part_two ul li a:hover, .main_footer_area .footer_part_three ul li a:hover{
+    color: #5db2ff;
+}
+.main_footer_area .footer_part_four address{
+    color: #c7c7c7;
+    margin-bottom: 8px;
+}
+.main_footer_area .footer_part_four span{
+    color: #c7c7c7;
+    margin-bottom: 8px;
+    display: block;
+}
+.footer .copyright{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000000;
+    color: #c7c7c7;
+    font-size: 15px;
+    font-weight: 300;
+}
+/* ======= footer section styles end ======= */
